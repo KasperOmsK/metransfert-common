@@ -20,7 +20,7 @@ public class MeTransfertPacketTypes {
 	 *<====n bytes=====><======= N-n bytes =========>
 	 * </pre>
 	 */
-	public static final byte FILE = 1;
+	public static final byte FILEUPLOAD = 1;
 	
 	
 	public static final byte UPLOADRESULT = 3;
@@ -36,4 +36,9 @@ public class MeTransfertPacketTypes {
 	public static final byte INFORESULT = 5;
 	
 	public static final byte ERROR = 9;
+
+	public class UploadResult_ResultCode{
+		public static final byte OK = 0;
+		public static final byte INVALID_FILENAME = 1;
+	}
 }
