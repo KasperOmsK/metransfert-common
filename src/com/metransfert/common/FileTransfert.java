@@ -39,7 +39,7 @@ public class FileTransfert {
 		
 		try{
 			PacketHeader fileHeader = new PacketHeader( (int)(file.length() + PacketUtils.calculateNetworkStringLength(file.getName())) , 
-					MeTransfertPacketTypes.FILE);
+					MeTransfertPacketTypes.FILEUPLOAD);
 			
 			out.writeAndFlush(fileHeader);
 			
@@ -52,7 +52,7 @@ public class FileTransfert {
 			int count;
 	        while ((count = fis.read(data)) > 0) {
 	            out.write(data, 0, count);
-	            out.flush();
+	            out.flush(); //TODO : is flush necessary ?
 	        }
 		}
 		catch(IOException e){
