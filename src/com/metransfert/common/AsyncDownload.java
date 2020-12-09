@@ -39,7 +39,7 @@ public class AsyncDownload extends AsyncTransfert{
 		try{
 			PacketHeader header = in.readHeader();
 			
-			if(header.type != MeTransfertPacketTypes.FILEUPLOAD)
+			if(header.type != PacketTypes.FILEUPLOAD)
 				throw new RuntimeException("invalid packet type read by Async downloader");
 			
 			this.filename = in.readString();

@@ -14,6 +14,7 @@ public class FileTransfert {
 	
 	private static int BUFFER_SIZE = 10*1024;
 	
+	@SuppressWarnings("unused")
 	private PacketInputStream in;
 	private PacketOutputStream out;
 	
@@ -39,9 +40,9 @@ public class FileTransfert {
 		
 		try{
 			PacketHeader fileHeader = new PacketHeader( (int)(file.length() + PacketUtils.calculateNetworkStringLength(file.getName())) , 
-					MeTransfertPacketTypes.FILEUPLOAD);
+					PacketTypes.FILEUPLOAD);
 			
-			out.writeAndFlush(fileHeader);
+			out.write(fileHeader);
 			
 			//send file name
 			out.write(file.getName());
@@ -51,8 +52,8 @@ public class FileTransfert {
 			byte[] data = new byte[BUFFER_SIZE];
 			int count;
 	        while ((count = fis.read(data)) > 0) {
-	            out.write(data, 0, count);
-	            out.flush(); //TODO : is flush necessary ?
+	        	out.write(data, 0, count);
+	            out.flush();
 	        }
 		}
 		catch(IOException e){

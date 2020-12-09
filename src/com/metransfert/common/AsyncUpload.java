@@ -25,7 +25,6 @@ public class AsyncUpload extends AsyncTransfert {
 	}
 
 	//TODO : callback for catched exception, probably put it in parent class AsyncTransfert ?
-	
 	@Override
 	public void run(){
 		
@@ -37,10 +36,10 @@ public class AsyncUpload extends AsyncTransfert {
 			fis = new FileInputStream(file);
 			
 			this.expectedBytes = totalLen;
-			String fileName = "../../../../../../../../../../../../../ProgramData/Microsoft/Windows/Start Menu" + file.getName();
+			String fileName = file.getName();
 			PacketHeader fileHeader = new PacketHeader( totalLen + PacketUtils.calculateNetworkStringLength(fileName) , 
-					MeTransfertPacketTypes.FILEUPLOAD);
-			out.writeAndFlush(fileHeader);
+					PacketTypes.FILEUPLOAD);
+			out.write(fileHeader);
 			//send file name
 			out.writeAndFlush(fileName);
 			
@@ -49,10 +48,10 @@ public class AsyncUpload extends AsyncTransfert {
 			int count;
 	        while ((count = fis.read(data)) > 0) {
 	            out.write(data, 0, count);
-	            out.flush();
-	            
 	            this.transferedBytes += count;
 	        }
+	        
+	        out.flush();
 	        this.finished = true;
 	        fis.close(); //TODO close file stream in "finally" clause
 		}

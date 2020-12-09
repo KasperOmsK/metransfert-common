@@ -1,6 +1,6 @@
 package com.metransfert.common;
 
-public class MeTransfertPacketTypes {
+public class PacketTypes {
 	
 	public static final byte RESERVED = 0;
 	
@@ -36,9 +36,4 @@ public class MeTransfertPacketTypes {
 	public static final byte INFORESULT = 5;
 	
 	public static final byte ERROR = 9;
-
-	public class UploadResult_ResultCode{
-		public static final byte OK = 0;
-		public static final byte INVALID_FILENAME = 1;
-	}
 }
