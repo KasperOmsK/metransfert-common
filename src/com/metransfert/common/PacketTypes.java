@@ -1,5 +1,6 @@
 package com.metransfert.common;
 
+//TODO : Change packet type constants to match with protocol definition (see google drive /protocol)
 public class PacketTypes {
 	
 	public static final byte RESERVED = 0;
@@ -36,4 +37,8 @@ public class PacketTypes {
 	public static final byte INFORESULT = 5;
 	
 	public static final byte ERROR = 9;
+	
+	public static final byte PING = 6;
+	
+	public static final byte PONG = 7;
 }
