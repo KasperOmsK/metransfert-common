@@ -1,4 +1,4 @@
-= Me Transfer
+= Projet : Me Transfer
 Ringot Alexandre
 Dec 15 2020 metransfer rapport
 :toc:
@@ -25,6 +25,7 @@ Ce site permet l'échange de fichier temporaire entre particulier (limité à 2 
 image::ressources/logo.ico[Logo de MeTransfer]
 
 Voici le cahier des charges initialement proposé :
+
 
 ****
 *Idées de base*
@@ -53,7 +54,7 @@ potentiellement par le client)
 
 This is another paragraph.footnote:[I am footnote text and will be displayed at the bottom of the article.]
 
-== Projet et Réalisation
+== Projet et Réalisations
 
 Par la suite, et au fur et à mesure du développement, nous avons pensé à des fonctionnalités supplémentaires.
 À savoir :
@@ -72,17 +73,43 @@ Par la suite, et au fur et à mesure du développement, nous avons pensé à des
 * Permettre l'envoie de fichier de plus de 2Go (limitation actuelle due au protocol utilisé)
 ****
 
+La définition d'un protocol est nécessaire
+
 === Packeteer
+pourquoi packeteer
+
+Role de Packeteer
+
+
 === Commun
+
+=== Serveur
+
+.Présentation du serveur
+image::ressources/ServerPresentation.gif[]
+
+Dans l'ordre :
+
+. Lancement du serveur
+. Création d'un store dû à l'upload d'un client
+. Crash/relancement du serveur
+. Restauration du store
+. Ping d'un client
+. Expiration du store
+
 === Client
 
 . Ligne de commande
+
+Une première version du client à d'abord été developpé en parallèle du protocol. Même si celui-ci n'avait pas été encore complétement défini,
+ le but était principalement de réaliser du debug. Cela à été également une façon de visualiser et de définir clairement l'utilisation du logiciel dans sa version définitive.
+
 . Interface graphique
 
 .Présentation
 image::ressources/presentation.gif[]
 
-=== Serveur
+
 
 == Amélioration
 À dater du 15/12/2020, toutes les fonctionnalités de bases prévus par le cahier des charges ainsi que les quelques améliorations sont implémentés.
