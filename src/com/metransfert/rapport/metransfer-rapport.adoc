@@ -17,7 +17,7 @@ Dans le cadre de la 4e année à l'ESIEE Amiens, il est demandé de réaliser un
 * Intégrer une notion client/server
 
 Étant donnée que cela nous à été autorisé, nous avons choisi de proposer notre sujet.
-Celui-ci s'insipire grandement du site https://wetransfer.com/[WeTransfer.com].
+Celui-ci s'inspire grandement du site https://wetransfer.com/[WeTransfer.com].
 Ce site permet l'échange de fichier temporaire entre particulier (limité à 2 Go).
 
 
@@ -28,6 +28,8 @@ Voici le cahier des charges initialement proposé :
 
 ****
 *Idées de base*
+
+* Développement en ligne de commande
 
 .Client :
 * Peut uploader un fichier (un serveur stock ce ficher et génère un Identifiant valable X temps (paramétrable
@@ -52,6 +54,24 @@ potentiellement par le client)
 This is another paragraph.footnote:[I am footnote text and will be displayed at the bottom of the article.]
 
 == Projet et Réalisation
+
+Par la suite, et au fur et à mesure du développement, nous avons pensé à des fonctionnalités supplémentaires.
+À savoir :
+****
+.Fonctionnalité
+* Mise à jour automatique du client
+* Transférer un dossier, ou de multiples fichiers
+* Algorithme générant un Identifiant prononçable
+
+.Client
+* Avoir une liste de serveur (pouvoir ajouter une adresse de serveur et la garder en mémoire)
+* Drag & drop
+* Pouvoir faire _clic droit_ sur un fichier et faire “envoyer avec MeTransfer”
+
+.Protocol
+* Permettre l'envoie de fichier de plus de 2Go (limitation actuelle due au protocol utilisé)
+****
+
 === Packeteer
 === Commun
 === Client
@@ -63,6 +83,40 @@ This is another paragraph.footnote:[I am footnote text and will be displayed at 
 image::ressources/presentation.gif[]
 
 === Serveur
+
+== Amélioration
+À dater du 15/12/2020, toutes les fonctionnalités de bases prévus par le cahier des charges ainsi que les quelques améliorations sont implémentés.
+
+* [x] Développement en ligne de commande
+
+.Client
+* [x] Uploader
+* [x] Télécharger
+
+.Serveur
+* [x] Peut stocker des fichiers (Taille limite à déterminer)
+* [x] Garde en mémoire un couple fichier/identifiant temporairement
+* [x] Gère les erreurs (ID non valable, fichiers trop volumineux...)
+
+.Idées d'améliorations
+* [x] Interface Graphique
+* [ ] Chiffrement des transferts
+* [x] Un client peut récupérer des informations sur un fichier avant le téléchargement (Taille, type...)
+* [x] Serveur paramétrable par fichier de configuration
+
+.Fonctionnalité
+* [ ] Mise à jour automatique du client
+* [ ] Transférer un dossier, ou de multiples fichiers
+* [ ] Algorithme générant un Identifiant prononçable
+
+.Client
+* [ ] Avoir une liste de serveur (pouvoir ajouter une adresse de serveur et la garder en mémoire)
+* [ ] Drag & drop
+* [ ] Pouvoir faire _clic droit_ sur un fichier et faire “envoyer avec MeTransfer”
+
+.Protocol
+* [ ] Permettre l'envoie de fichier de plus de 2Go (limitation actuelle due au protocol utilisé)
+
 
 == GitHub
 
