@@ -1,0 +1,74 @@
+= Me Transfer
+Ringot Alexandre
+Dec 15 2020 metransfer rapport
+:toc:
+:icons: font
+:quick-uri: https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
+:author: Alexandre Ringot & Stringari Pierre
+
+Content entered directly below the header but before the first section heading is called the preamble.
+
+== Introduction
+
+Dans le cadre de la 4e année à l'ESIEE Amiens, il est demandé de réaliser un projet en binôme avec les contraintes de programmation suivantes :
+
+* Utiliser le language java
+* Utiliser le protocole https://en.wikipedia.org/wiki/Internet_protocol_suite[TCP/IP]
+* Intégrer une notion client/server
+
+Étant donnée que cela nous à été autorisé, nous avons choisi de proposer notre sujet.
+Celui-ci s'insipire grandement du site https://wetransfer.com/[WeTransfer.com].
+Ce site permet l'échange de fichier temporaire entre particulier (limité à 2 Go).
+
+
+.Logo de MeTransfer
+image::ressources/logo.ico[Logo de MeTransfer]
+
+Voici le cahier des charges initialement proposé :
+
+****
+*Idées de base*
+
+.Client :
+* Peut uploader un fichier (un serveur stock ce ficher et génère un Identifiant valable X temps (paramétrable
+potentiellement par le client)
+* Peut télécharger un fichier en fournissant un identifiant valable
+
+.Serveur :
+* Peut stocker des fichiers (Taille limite à déterminer)
+* Garde en mémoire un couple fichier/identifiant temporairement
+* Gère les erreurs (ID non valable, fichiers trop volumineux...)
+
+*Idées d'amélioration*
+.
+
+. Interface Graphique
+. Chiffrement des transferts
+. Un client peut récupérer des informations sur un fichier avant le téléchargement (Taille, type...)
+. Serveur paramétrable par fichier de configuration
+
+****
+
+This is another paragraph.footnote:[I am footnote text and will be displayed at the bottom of the article.]
+
+== Projet et Réalisation
+=== Packeteer
+=== Commun
+=== Client
+
+. Ligne de commande
+. Interface graphique
+
+.Présentation
+image::ressources/presentation.gif[]
+
+=== Serveur
+
+== GitHub
+
+Le code source du projet est disponible sur GitHub:
+
+* https://github.com/KasperOmsk/Packetter[Packeteer]
+* https://github.com/Zelldonn/metransfert-common[Commun]
+* https://github.com/Zelldonn/metransfert-client[Client]
+* https://github.com/Zelldonn/metransfert-server[Serveur]
