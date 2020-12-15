@@ -39,6 +39,10 @@ public class PacketTypes {
 	public static final byte ERROR = 9;
 	
 	public static final byte PING = 6;
-	
 	public static final byte PONG = 7;
+	
+	//update protocol packet types
+	public static final byte REQVERSION = 100;
+	public static final byte REQLATEST = 101;
+	public static final byte REQLATEST_RESULT = 102;
 }

@@ -21,10 +21,10 @@ public class FileTransfert {
 	public FileTransfert(PacketInputStream file_in, PacketOutputStream file_out){
 		
 		if(file_in == null)
-			throw new NullPointerException("Argument 'PacketInputStream' cannot be null");
+			throw new IllegalArgumentException("Argument 'PacketInputStream' cannot be null");
 		
 		if(file_out == null)
-			throw new NullPointerException("Argument 'PacketOutputStream' cannot be null");
+			throw new IllegalArgumentException("Argument 'PacketOutputStream' cannot be null");
 		
 		this.in = file_in;
 		this.out = file_out;
@@ -34,7 +34,7 @@ public class FileTransfert {
 		//create and send appropriate header
 		
 		if(file == null)
-			throw new NullPointerException("File argument cannot be null");
+			throw new IllegalArgumentException("File argument cannot be null");
 		
 		FileInputStream fis = null;
 		
@@ -68,7 +68,7 @@ public class FileTransfert {
 	public File download(Path saveDirectory) throws IOException{
 		
 		if(saveDirectory == null)
-			throw new NullPointerException("Argument 'Path' cannot be null");
+			throw new IllegalArgumentException("Argument 'Path' cannot be null");
 				
 		throw new RuntimeException("Not implemented yet");
 	}
