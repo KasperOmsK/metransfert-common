@@ -1,12 +1,11 @@
 = Projet : Me Transfer
 Ringot Alexandre
-Dec 15 2020 metransfer rapport
+Dec 15 2020 rapport metransfer
 :toc:
 :icons: font
 :quick-uri: https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
 :author: Alexandre Ringot & Stringari Pierre
 
-Content entered directly below the header but before the first section heading is called the preamble.
 
 == Introduction
 
@@ -54,7 +53,7 @@ potentiellement par le client)
 
 This is another paragraph.footnote:[I am footnote text and will be displayed at the bottom of the article.]
 
-== Projet et Réalisations
+== Projet et réalisations
 
 Par la suite, et au fur et à mesure du développement, nous avons pensé à des fonctionnalités supplémentaires.
 À savoir :
@@ -149,7 +148,7 @@ image::ressources/presentation.gif[]
 
 Le code source du projet est disponible sur GitHub:
 
-* https://github.com/KasperOmsk/Packetter[Packeteer]
-* https://github.com/Zelldonn/metransfert-common[Commun]
+* https://github.com/KasperOmsK/Packeteer[Packeteer]
+* https://github.com/KasperOmsK/metransfert-common[Commun]
 * https://github.com/Zelldonn/metransfert-client[Client]
-* https://github.com/Zelldonn/metransfert-server[Serveur]
+* https://github.com/KasperOmsK/metransfert-server[Serveur]
