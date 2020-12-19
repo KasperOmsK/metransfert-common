@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="generator" content="Asciidoctor 2.0.12">
 <meta name="author" content="Alexandre Ringot &amp; Stringari Pierre">
 <title>Projet : Me Transfer</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -48,7 +48,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -63,10 +63,8 @@ img{-ms-interpolation-mode:bicubic}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
-.center{margin-left:auto;margin-right:auto}
-.stretch{width:100%}
 .subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
-div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
 a{color:#2156a5;text-decoration:underline;line-height:inherit}
 a:hover,a:focus{color:#1d4b8f}
 a img{border:0}
@@ -106,19 +104,22 @@ h1{font-size:2.75em}
 h2{font-size:2.3125em}
 h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
 h4{font-size:1.4375em}}
-table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede;word-wrap:normal}
 table thead,table tfoot{background:#f7f8f7}
 table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt{background:#f8f8f7}
-table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
 .clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
 .clearfix::after,.float-group::after{clear:both}
-:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
-:not(pre)>code.nobreak{word-wrap:normal}
-:not(pre)>code.nowrap{white-space:nowrap}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
 pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
 pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
 pre>code{display:block}
@@ -183,7 +184,7 @@ body.toc2.toc-right{padding-left:0;padding-right:20em}}
 #content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
 #content #toc>:first-child{margin-top:0}
 #content #toc>:last-child{margin-bottom:0}
-#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
 #footer-text{color:rgba(255,255,255,.8);line-height:1.44}
 #content{margin-bottom:.625em}
 .sect1{padding-bottom:.625em}
@@ -206,7 +207,7 @@ table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font
 .admonitionblock>table td.icon{text-align:center;width:80px}
 .admonitionblock>table td.icon img{max-width:none}
 .admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
-.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
 .exampleblock>.content>:first-child{margin-top:0}
@@ -216,7 +217,7 @@ table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font
 .sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
 .exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
-.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;overflow-x:auto;padding:1em;font-size:.8125em}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
 .literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
@@ -262,21 +263,20 @@ pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
 .quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
 .quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
-table.tableblock{max-width:100%;border-collapse:separate}
 p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
 td.tableblock>.content>:last-child{margin-bottom:-1.25em}
-td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
 table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
-table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
-table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
-table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
-table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
-table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
-table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
-table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
 table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
 table.frame-sides{border-width:0 1px}
-table.frame-topbot,table.frame-ends{border-width:1px 0}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
 table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
 th.halign-left,td.halign-left{text-align:left}
 th.halign-right,td.halign-right{text-align:right}
@@ -285,7 +285,7 @@ th.valign-top,td.valign-top{vertical-align:top}
 th.valign-bottom,td.valign-bottom{vertical-align:bottom}
 th.valign-middle,td.valign-middle{vertical-align:middle}
 table thead th,table tfoot th{font-weight:bold}
-tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th{background:#f7f8f7}
 tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
 p.tableblock>code:only-child{background:none;padding:0}
 p.tableblock{font-size:1em}
@@ -314,6 +314,7 @@ ol.lowergreek{list-style-type:lower-greek}
 .hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
 td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
 td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
 .literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
 .colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
 .colist td:not([class]):first-child img{max-width:none}
@@ -386,7 +387,7 @@ a span.icon>.fa{cursor:inherit}
 .admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
 .admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
 .admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
-.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:50%;border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
 .conum[data-value] *{color:#fff!important}
 .conum[data-value]+b{display:none}
 .conum[data-value]::after{content:attr(data-value)}
@@ -413,6 +414,7 @@ thead{display:table-header-group}
 svg{max-width:100%}
 p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
 h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
 #toc,.sidebarblock,.exampleblock>.content{background:none!important}
 #toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
 body.book #header{text-align:center}
@@ -438,12 +440,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="article data-line-1">
+<body class="article">
 <div id="header">
 <h1>Projet : Me Transfer</h1>
 <div class="details">
 <span id="author" class="author">Alexandre Ringot &amp; Stringari Pierre</span><br>
-<span id="revdate">Dec 15 2020 rapport metransfer</span>
+<span id="revdate">Rapport de projet java I4 ESIEE Amiens</span>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -463,222 +465,222 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div id="content">
-<div class="sect1 data-line-10">
+<div class="sect1">
 <h2 id="_introduction">Introduction</h2>
 <div class="sectionbody">
-<div class="paragraph data-line-12">
+<div class="paragraph">
 <p>Dans le cadre de la 4e année à l&#8217;ESIEE Amiens, il est demandé de réaliser un projet en binôme avec les contraintes de programmation suivantes :</p>
 </div>
-<div class="ulist data-line-14">
+<div class="ulist">
 <ul>
-<li class="data-line-14">
+<li>
 <p>Utiliser le language java</p>
 </li>
-<li class="data-line-15">
+<li>
 <p>Utiliser le protocole <a href="https://en.wikipedia.org/wiki/Internet_protocol_suite">TCP/IP</a></p>
 </li>
-<li class="data-line-16">
+<li>
 <p>Intégrer une notion client/server</p>
 </li>
 </ul>
 </div>
-<div class="paragraph data-line-18">
-<p>Étant donnée que cela nous à été autorisé, nous avons choisi de proposer notre sujet.
+<div class="paragraph">
+<p>Étant donnée que cela nous a été permis, nous avons fait le choix de proposer notre sujet.
 Celui-ci s&#8217;inspire grandement du site <a href="https://wetransfer.com/">WeTransfer.com</a>.
-Ce site permet l&#8217;échange de fichier temporaire entre particulier (limité à 2 Go).</p>
+Ce site permet l&#8217;échange de fichier temporaire entre particulier. Notre projet porte actuellement le nom de MeTransfer.</p>
 </div>
-<div class="imageblock data-line-24">
+<div class="imageblock">
 <div class="content">
 <img src="ressources/logo.ico" alt="Logo de MeTransfer">
 </div>
 <div class="title">Figure 1. Logo de MeTransfer</div>
 </div>
-<div class="paragraph data-line-26">
+<div class="paragraph">
 <p>Voici le cahier des charges initialement proposé :</p>
 </div>
-<div class="sidebarblock data-line-29">
+<div class="sidebarblock">
 <div class="content">
-<div class="paragraph data-line-30">
+<div class="paragraph">
 <p><strong>Idées de base</strong></p>
 </div>
-<div class="ulist data-line-32">
+<div class="ulist">
 <ul>
-<li class="data-line-32">
+<li>
 <p>Développement en ligne de commande</p>
 </li>
 </ul>
 </div>
-<div class="ulist data-line-35">
+<div class="ulist">
 <div class="title">Client :</div>
 <ul>
-<li class="data-line-35">
+<li>
 <p>Peut uploader un fichier (un serveur stock ce ficher et génère un Identifiant valable X temps (paramétrable
 potentiellement par le client)</p>
 </li>
-<li class="data-line-37">
+<li>
 <p>Peut télécharger un fichier en fournissant un identifiant valable</p>
 </li>
 </ul>
 </div>
-<div class="ulist data-line-40">
+<div class="ulist">
 <div class="title">Serveur :</div>
 <ul>
-<li class="data-line-40">
+<li>
 <p>Peut stocker des fichiers (Taille limite à déterminer)</p>
 </li>
-<li class="data-line-41">
+<li>
 <p>Garde en mémoire un couple fichier/identifiant temporairement</p>
 </li>
-<li class="data-line-42">
+<li>
 <p>Gère les erreurs (ID non valable, fichiers trop volumineux&#8230;&#8203;)</p>
 </li>
 </ul>
 </div>
-<div class="paragraph data-line-44">
+<div class="paragraph">
 <p><strong>Idées d&#8217;amélioration</strong>
 .</p>
 </div>
-<div class="olist arabic data-line-47">
+<div class="olist arabic">
 <ol class="arabic">
-<li class="data-line-47">
+<li>
 <p>Interface Graphique</p>
 </li>
-<li class="data-line-48">
+<li>
 <p>Chiffrement des transferts</p>
 </li>
-<li class="data-line-49">
+<li>
 <p>Un client peut récupérer des informations sur un fichier avant le téléchargement (Taille, type&#8230;&#8203;)</p>
 </li>
-<li class="data-line-50">
+<li>
 <p>Serveur paramétrable par fichier de configuration</p>
 </li>
 </ol>
 </div>
 </div>
 </div>
-<div class="paragraph data-line-54">
+<div class="paragraph">
 <p>This is another paragraph.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
 </div>
 </div>
 </div>
-<div class="sect1 data-line-56">
+<div class="sect1">
 <h2 id="_projet_et_réalisations">Projet et réalisations</h2>
 <div class="sectionbody">
-<div class="paragraph data-line-58">
+<div class="paragraph">
 <p>Par la suite, et au fur et à mesure du développement, nous avons pensé à des fonctionnalités supplémentaires.
 À savoir :</p>
 </div>
-<div class="sidebarblock data-line-60">
+<div class="sidebarblock">
 <div class="content">
-<div class="ulist data-line-62">
+<div class="ulist">
 <div class="title">Fonctionnalité</div>
 <ul>
-<li class="data-line-62">
+<li>
 <p>Mise à jour automatique du client</p>
 </li>
-<li class="data-line-63">
+<li>
 <p>Transférer un dossier, ou de multiples fichiers</p>
 </li>
-<li class="data-line-64">
+<li>
 <p>Algorithme générant un Identifiant prononçable</p>
 </li>
 </ul>
 </div>
-<div class="ulist data-line-67">
+<div class="ulist">
 <div class="title">Client</div>
 <ul>
-<li class="data-line-67">
+<li>
 <p>Avoir une liste de serveur (pouvoir ajouter une adresse de serveur et la garder en mémoire)</p>
 </li>
-<li class="data-line-68">
+<li>
 <p>Drag &amp; drop</p>
 </li>
-<li class="data-line-69">
+<li>
 <p>Pouvoir faire <em>clic droit</em> sur un fichier et faire “envoyer avec MeTransfer”</p>
 </li>
 </ul>
 </div>
-<div class="ulist data-line-72">
+<div class="ulist">
 <div class="title">Protocol</div>
 <ul>
-<li class="data-line-72">
+<li>
 <p>Permettre l&#8217;envoie de fichier de plus de 2Go (limitation actuelle due au protocol utilisé)</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
-<div class="paragraph data-line-75">
+<div class="paragraph">
 <p>La définition d&#8217;un protocol est nécessaire</p>
 </div>
-<div class="sect2 data-line-77">
+<div class="sect2">
 <h3 id="_packeteer">Packeteer</h3>
-<div class="paragraph data-line-78">
+<div class="paragraph">
 <p>pourquoi packeteer</p>
 </div>
-<div class="paragraph data-line-80">
+<div class="paragraph">
 <p>Role de Packeteer</p>
 </div>
 </div>
-<div class="sect2 data-line-83">
+<div class="sect2">
 <h3 id="_commun">Commun</h3>
 
 </div>
-<div class="sect2 data-line-85">
+<div class="sect2">
 <h3 id="_serveur">Serveur</h3>
-<div class="imageblock data-line-88">
+<div class="imageblock">
 <div class="content">
 <img src="ressources/ServerPresentation.gif" alt="ServerPresentation">
 </div>
 <div class="title">Figure 2. Présentation du serveur</div>
 </div>
-<div class="paragraph data-line-90">
+<div class="paragraph">
 <p>Dans l&#8217;ordre :</p>
 </div>
-<div class="olist arabic data-line-92">
+<div class="olist arabic">
 <ol class="arabic">
-<li class="data-line-92">
+<li>
 <p>Lancement du serveur</p>
 </li>
-<li class="data-line-93">
+<li>
 <p>Création d&#8217;un store dû à l&#8217;upload d&#8217;un client</p>
 </li>
-<li class="data-line-94">
+<li>
 <p>Crash/relancement du serveur</p>
 </li>
-<li class="data-line-95">
+<li>
 <p>Restauration du store</p>
 </li>
-<li class="data-line-96">
+<li>
 <p>Ping d&#8217;un client</p>
 </li>
-<li class="data-line-97">
+<li>
 <p>Expiration du store</p>
 </li>
 </ol>
 </div>
 </div>
-<div class="sect2 data-line-99">
+<div class="sect2">
 <h3 id="_client">Client</h3>
-<div class="olist arabic data-line-101">
+<div class="olist arabic">
 <ol class="arabic">
-<li class="data-line-101">
+<li>
 <p>Ligne de commande</p>
 </li>
 </ol>
 </div>
-<div class="paragraph data-line-103">
+<div class="paragraph">
 <p>Une première version du client à d&#8217;abord été developpé en parallèle du protocol. Même si celui-ci n&#8217;avait pas été encore complétement défini,
  le but était principalement de réaliser du debug. Cela à été également une façon de visualiser et de définir clairement l&#8217;utilisation du logiciel dans sa version définitive.</p>
 </div>
-<div class="olist arabic data-line-106">
+<div class="olist arabic">
 <ol class="arabic">
-<li class="data-line-106">
+<li>
 <p>Interface graphique</p>
 </li>
 </ol>
 </div>
-<div class="imageblock data-line-109">
+<div class="imageblock">
 <div class="content">
 <img src="ressources/presentation.gif" alt="presentation">
 </div>
@@ -687,117 +689,117 @@ potentiellement par le client)</p>
 </div>
 </div>
 </div>
-<div class="sect1 data-line-113">
+<div class="sect1">
 <h2 id="_amélioration">Amélioration</h2>
 <div class="sectionbody">
-<div class="paragraph data-line-114">
+<div class="paragraph">
 <p>À dater du 15/12/2020, toutes les fonctionnalités de bases prévus par le cahier des charges ainsi que les quelques améliorations sont implémentés.</p>
 </div>
-<div class="ulist checklist data-line-116">
+<div class="ulist checklist">
 <ul class="checklist">
-<li class="data-line-116">
+<li>
 <p><i class="fa fa-check-square-o"></i> Développement en ligne de commande</p>
 </li>
 </ul>
 </div>
-<div class="ulist checklist data-line-119">
+<div class="ulist checklist">
 <div class="title">Client</div>
 <ul class="checklist">
-<li class="data-line-119">
+<li>
 <p><i class="fa fa-check-square-o"></i> Uploader</p>
 </li>
-<li class="data-line-120">
+<li>
 <p><i class="fa fa-check-square-o"></i> Télécharger</p>
 </li>
 </ul>
 </div>
-<div class="ulist checklist data-line-123">
+<div class="ulist checklist">
 <div class="title">Serveur</div>
 <ul class="checklist">
-<li class="data-line-123">
+<li>
 <p><i class="fa fa-check-square-o"></i> Peut stocker des fichiers (Taille limite à déterminer)</p>
 </li>
-<li class="data-line-124">
+<li>
 <p><i class="fa fa-check-square-o"></i> Garde en mémoire un couple fichier/identifiant temporairement</p>
 </li>
-<li class="data-line-125">
+<li>
 <p><i class="fa fa-check-square-o"></i> Gère les erreurs (ID non valable, fichiers trop volumineux&#8230;&#8203;)</p>
 </li>
 </ul>
 </div>
-<div class="ulist checklist data-line-128">
+<div class="ulist checklist">
 <div class="title">Idées d&#8217;améliorations</div>
 <ul class="checklist">
-<li class="data-line-128">
+<li>
 <p><i class="fa fa-check-square-o"></i> Interface Graphique</p>
 </li>
-<li class="data-line-129">
+<li>
 <p><i class="fa fa-square-o"></i> Chiffrement des transferts</p>
 </li>
-<li class="data-line-130">
+<li>
 <p><i class="fa fa-check-square-o"></i> Un client peut récupérer des informations sur un fichier avant le téléchargement (Taille, type&#8230;&#8203;)</p>
 </li>
-<li class="data-line-131">
+<li>
 <p><i class="fa fa-check-square-o"></i> Serveur paramétrable par fichier de configuration</p>
 </li>
 </ul>
 </div>
-<div class="ulist checklist data-line-134">
+<div class="ulist checklist">
 <div class="title">Fonctionnalité</div>
 <ul class="checklist">
-<li class="data-line-134">
+<li>
 <p><i class="fa fa-square-o"></i> Mise à jour automatique du client</p>
 </li>
-<li class="data-line-135">
+<li>
 <p><i class="fa fa-square-o"></i> Transférer un dossier, ou de multiples fichiers</p>
 </li>
-<li class="data-line-136">
+<li>
 <p><i class="fa fa-square-o"></i> Algorithme générant un Identifiant prononçable</p>
 </li>
 </ul>
 </div>
-<div class="ulist checklist data-line-139">
+<div class="ulist checklist">
 <div class="title">Client</div>
 <ul class="checklist">
-<li class="data-line-139">
+<li>
 <p><i class="fa fa-square-o"></i> Avoir une liste de serveur (pouvoir ajouter une adresse de serveur et la garder en mémoire)</p>
 </li>
-<li class="data-line-140">
+<li>
 <p><i class="fa fa-square-o"></i> Drag &amp; drop</p>
 </li>
-<li class="data-line-141">
+<li>
 <p><i class="fa fa-square-o"></i> Pouvoir faire <em>clic droit</em> sur un fichier et faire “envoyer avec MeTransfer”</p>
 </li>
 </ul>
 </div>
-<div class="ulist checklist data-line-144">
+<div class="ulist checklist">
 <div class="title">Protocol</div>
 <ul class="checklist">
-<li class="data-line-144">
+<li>
 <p><i class="fa fa-square-o"></i> Permettre l&#8217;envoie de fichier de plus de 2Go (limitation actuelle due au protocol utilisé)</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
-<div class="sect1 data-line-147">
+<div class="sect1">
 <h2 id="_github">GitHub</h2>
 <div class="sectionbody">
-<div class="paragraph data-line-149">
+<div class="paragraph">
 <p>Le code source du projet est disponible sur GitHub:</p>
 </div>
-<div class="ulist data-line-151">
+<div class="ulist">
 <ul>
-<li class="data-line-151">
+<li>
 <p><a href="https://github.com/KasperOmsK/Packeteer">Packeteer</a></p>
 </li>
-<li class="data-line-152">
+<li>
 <p><a href="https://github.com/KasperOmsK/metransfert-common">Commun</a></p>
 </li>
-<li class="data-line-153">
+<li>
 <p><a href="https://github.com/Zelldonn/metransfert-client">Client</a></p>
 </li>
-<li class="data-line-154">
+<li>
 <p><a href="https://github.com/KasperOmsK/metransfert-server">Serveur</a></p>
 </li>
 </ul>
@@ -813,7 +815,7 @@ potentiellement par le client)</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-12-18 18:56:21 +0100
+Last updated 2020-12-18 22:56:59 +0100
 </div>
 </div>
 </body>

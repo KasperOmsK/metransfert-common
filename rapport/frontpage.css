@@ -2,6 +2,10 @@
     font-family: myFont;
     src: url(ressources/fonts/consolab.ttf);
   }
+  @font-face {
+    font-family: font2;
+    src: url(ressources/fonts/Roboto-Bold.ttf);
+  }
 body{
     background-color: #5c97f0;
     text-align: justify;
@@ -24,11 +28,15 @@ body{
     
 }
 ul{
-    margin-top: 15%;
+    margin-top: 20%;
 }
 img {
     max-width: 30%;
     height: auto;
+}
+
+#logo{
+    margin-bottom: 20%;
 }
 
 li{
@@ -44,7 +52,7 @@ li{
     color: black;
     box-sizing: border-box;
     margin-left: 0%;
-    font-family: myFont;
+    font-family: font2;
     font-size: larger;
     transition: margin-left 0.4s ease 0s;
 }

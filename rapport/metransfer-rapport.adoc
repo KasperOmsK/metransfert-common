@@ -1,6 +1,6 @@
 = Projet : Me Transfer
 Ringot Alexandre
-Dec 15 2020 rapport metransfer
+Rapport de projet java I4 ESIEE Amiens
 :toc:
 :icons: font
 :quick-uri: https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
@@ -15,9 +15,9 @@ Dans le cadre de la 4e année à l'ESIEE Amiens, il est demandé de réaliser un
 * Utiliser le protocole https://en.wikipedia.org/wiki/Internet_protocol_suite[TCP/IP]
 * Intégrer une notion client/server
 
-Étant donnée que cela nous à été autorisé, nous avons choisi de proposer notre sujet.
+Étant donnée que cela nous a été permis, nous avons fait le choix de proposer notre sujet.
 Celui-ci s'inspire grandement du site https://wetransfer.com/[WeTransfer.com].
-Ce site permet l'échange de fichier temporaire entre particulier (limité à 2 Go).
+Ce site permet l'échange de fichier temporaire entre particulier. Notre projet porte actuellement le nom de MeTransfer.
 
 
 .Logo de MeTransfer
@@ -51,9 +51,9 @@ potentiellement par le client)
 
 ****
 
-This is another paragraph.footnote:[I am footnote text and will be displayed at the bottom of the article.]
-
 == Projet et réalisations
+Dès le début du projet
+La difficulté de ce projet réside dans son architecture : nous voulions créer un programme à la fois simple mais que l'on puisse continuer à
 
 Par la suite, et au fur et à mesure du développement, nous avons pensé à des fonctionnalités supplémentaires.
 À savoir :
